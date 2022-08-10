@@ -73,6 +73,11 @@ html {
     transition: 0.2s;
 }
 
+.card-curso {
+    display: flex;
+    width: 50%;
+}
+
 svg {
     fill: var(--foreground);
 }
@@ -93,7 +98,6 @@ svg {
 .container-2 {
     width: 60%;
     color: var(--cor-destaque);
-    ;
     text-align: justify;
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -103,6 +107,9 @@ svg {
 .container-3 {
     width: 40%;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .container-3 span {
@@ -274,13 +281,17 @@ svg {
 .contato {
     display: flex;
     gap: 2rem;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
 }
 
 .redes {
-    width: 30%;
     text-align: left;
     font-size: 1.6rem;
     line-height: 80px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .redes i {
@@ -297,7 +308,6 @@ svg {
 
 .formulario {
     display: grid;
-    width: 70%;
     gap: 0.8rem;
 }
 
@@ -328,6 +338,19 @@ textarea::placeholder {
     border-radius: 15px;
     border: none;
     padding: 10px;
+    cursor: pointer;
+}
+
+.obrigado {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.obrigado a {
+    color: var(--foreground);
 }
 
 .footer {
@@ -456,6 +479,10 @@ textarea::placeholder {
         justify-content: center;
     }
 
+    .card-curso {
+        display: block;
+    }
+
     .projetos {
         flex-direction: column;
     }
@@ -467,11 +494,13 @@ textarea::placeholder {
 
     .contato {
         flex-direction: column;
+        width: 90%;
     }
 
     .redes {
         width: 100%;
         text-align: center;
+        flex-direction: column;
     }
 
     .formulario {
